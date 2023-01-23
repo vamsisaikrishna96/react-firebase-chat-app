@@ -6,12 +6,13 @@ import Room from "./components/room/Room";
 import Chat from "./components/chat/Chat";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(sessionStorage.getItem("auth-token"));
-  const [room, setRoom] = useState(null);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("auth-token"));
+  const [room, setRoom] = useState(localStorage.getItem("room"));
   const roomRef: any = useRef(null);
 
   const setRoomValue = () => {
     setRoom(roomRef.current.value);
+    localStorage.setItem("room", roomRef.current.value);
   };
   if (!isAuth) {
     return (

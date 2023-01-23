@@ -7,7 +7,7 @@ const Auth = ({ setIsAuth }: any) => {
   const signInWithGoogle = async () => {
     try {
       const authResult: any = await signInWithPopup(auth, provider);
-      sessionStorage.setItem("auth-token", authResult.user.accessToken);
+      localStorage.setItem("auth-token", authResult.user.accessToken);
       setIsAuth(true);
     } catch (error) {
       console.log(error);
