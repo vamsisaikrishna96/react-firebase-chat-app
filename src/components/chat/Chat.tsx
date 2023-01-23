@@ -27,7 +27,6 @@ const Chat = ({ roomName }: any) => {
 
     const unsubscribe = onSnapshot(queryMessages, (snapshot: any) => {
       let messagesFromDB: any = [];
-      console.log("new message received", snapshot);
       snapshot.forEach((doc: any) => {
         messagesFromDB.push({ ...doc.data(), id: doc.id });
       });
