@@ -20,7 +20,7 @@
 .text-message {
   color: black;
   font-size: 14px;
-  padding: 6px;
+  padding: 8px;
 }
 
 .text-bold {
@@ -63,7 +63,20 @@
 .chat-submit-btn {
   color: white;
   width: 100px;
-  height: 50px;
   margin-right: 5px;
   background-color: #9984d4;
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .data-input-container {
+    width: 100%;
+    height: 300px;
+  }
+  .chat-submit-btn {
+    color: white;
+    width: 80px;
+    height: 40px;
+  }
 }

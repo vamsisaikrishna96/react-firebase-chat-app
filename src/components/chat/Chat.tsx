@@ -38,7 +38,8 @@ const Chat = ({ roomName }: any) => {
     return () => unsubscribe();
   }, []);
 
-  const addMessage = async () => {
+  const addMessage = async (e: any) => {
+    e.preventDefault();
     if (messageRef.current.value === null) {
       return;
     }
@@ -82,7 +83,8 @@ const Chat = ({ roomName }: any) => {
               ))}
             <div ref={scrollRef}></div>
           </div>
-          <div className="input-btn-container">
+
+          <form className="input-btn-container" onSubmit={(e) => addMessage(e)}>
             <input
               className="chat-input"
               placeholder="Type your message here..."
@@ -91,7 +93,7 @@ const Chat = ({ roomName }: any) => {
             <button className="chat-submit-btn" onClick={addMessage}>
               Send
             </button>
-          </div>
+          </form>
         </div>
       </div>
       <Signout />

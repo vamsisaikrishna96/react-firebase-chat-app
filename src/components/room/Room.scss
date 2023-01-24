@@ -1,6 +1,6 @@
 .room-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 20px;
   flex-direction: column;
@@ -20,4 +20,17 @@
 .room-btn {
   margin-top: 20px;
   color: white;
+  background-color: #9984d4;
+}
+
+.room-title {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .room-container {
+    width: 250px;
+  }
 }

@@ -5,9 +5,10 @@ export const Room = ({ roomRef, setRoom }: any) => {
   return (
     <>
       <div className="room-container">
+        <div className="room-title">Enter into Room</div>
         <input ref={roomRef} className="room-input" />
         <button className="room-btn" onClick={setRoom}>
-          Enter Room
+          Enter
         </button>
       </div>
       <Signout />
